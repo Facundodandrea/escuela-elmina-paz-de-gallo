@@ -1,0 +1,27 @@
+$bg-main : #232946;
+$secondary-color: #EEBBC3;
+$white: #FDFDFD;
+$black: #0D0D0D;
+$main-font: Raleway;
+
+.article {
+    padding: 50px 0;
+    &Title{
+        font-size: 48px;
+        font-weight: bold;
+        color: $bg-main;
+        margin-bottom: 35px;
+    }
+    
+    .imgPlaceholder{
+        width: 100%;
+        height: 500px;
+        aspect-ratio: 16/9;
+        background-color: gray;
+    }
+
+    &Paragraph{
+        margin: 20px 0;
+        font-size: 24px;
+    }
+}

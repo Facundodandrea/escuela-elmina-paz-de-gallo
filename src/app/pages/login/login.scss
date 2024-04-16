@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --bg-light: #EDF1F5;
+    --primary-color: #5279c0;
+    --primary-color-hover: rgb(64, 104, 150);
+    --font-primary: 'Raleway', sans-serif;
+    --Shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.loginComponent {
+    background-color: var(--bg-light);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    font-family: var(--font-primary);
+
+    .loginContent {
+        background-color: white;
+        max-width: 400px;
+        width: 100%;
+        border-radius: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        text-align: center;
+
+        label {
+            display: block;
+            text-align: left;
+            margin-bottom: 10px; // Incrementé el espacio entre las etiquetas y los inputs
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px; // Incrementé la separación entre los inputs
+            border: 1px solid #ccc; // Agregué un borde muy sutil a los inputs
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: var(--primary-color);
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-family: var(--font-primary);
+        }
+
+        button:hover {
+            background-color: var(--primary-color-hover);
+        }
+    }
+}

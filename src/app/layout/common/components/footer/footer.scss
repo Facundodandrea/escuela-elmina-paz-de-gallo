@@ -1,0 +1,52 @@
+$bg-main : #232946;
+$secondary-color: #EEBBC3;
+$white: #FDFDFD;
+$black: #0D0D0D;
+$main-font: Raleway;
+
+.footerContainer {
+    background-color: $bg-main;
+    color: $white;
+    padding: 50px 0;
+
+    .footerContent {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        .links, .propuestas, .contacto {
+            h2 {
+                margin-bottom: 20px;
+            }
+
+            ul{
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .icons{
+                color: $secondary-color;
+            }
+        }
+        
+        .links, .propuestas {
+            li:hover {
+                color: $secondary-color;
+            }
+        }
+        
+    }
+
+    @media screen and (max-width: 768px) {
+        .footerContent {
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+
+        .links, .propuestas, .contacto {
+            padding: 0 25px;
+        }
+        }
+    }
+}

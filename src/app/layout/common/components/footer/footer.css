@@ -1,0 +1,34 @@
+.footerContainer {
+  background-color: #232946;
+  color: #FDFDFD;
+  padding: 50px 0;
+}
+.footerContainer .footerContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.footerContainer .footerContent .links h2, .footerContainer .footerContent .propuestas h2, .footerContainer .footerContent .contacto h2 {
+  margin-bottom: 20px;
+}
+.footerContainer .footerContent .links ul, .footerContainer .footerContent .propuestas ul, .footerContainer .footerContent .contacto ul {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.footerContainer .footerContent .links .icons, .footerContainer .footerContent .propuestas .icons, .footerContainer .footerContent .contacto .icons {
+  color: #EEBBC3;
+}
+.footerContainer .footerContent .links li:hover, .footerContainer .footerContent .propuestas li:hover {
+  color: #EEBBC3;
+}
+@media screen and (max-width: 768px) {
+  .footerContainer .footerContent {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+  }
+  .footerContainer .footerContent .links, .footerContainer .footerContent .propuestas, .footerContainer .footerContent .contacto {
+    padding: 0 25px;
+  }
+}/*# sourceMappingURL=footer.css.map */

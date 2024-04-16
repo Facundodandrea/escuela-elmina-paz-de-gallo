@@ -1,0 +1,51 @@
+.gallery {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+.gallery .container {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+.gallery .prev,
+.gallery .next {
+  position: absolute;
+  top: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: #232946;
+  color: #FDFDFD;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 1;
+  transition: all 300ms ease;
+  transform: translateY(-50%);
+}
+.gallery .prev {
+  left: 0px;
+}
+.gallery .next {
+  right: 0px;
+}
+.gallery:hover .prev, .gallery:hover .next {
+  opacity: 1;
+  transition: all 300ms ease;
+}
+.gallery img {
+  width: 300px;
+  height: 300px;
+  margin-right: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+  .gallery {
+    max-width: 300px;
+    width: 100%;
+  }
+}/*# sourceMappingURL=galleryCarousel.css.map */

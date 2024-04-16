@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+$bg-main: #232946;
+$secondary-color: #EEBBC3;
+$white: #FDFDFD;
+$black: #0D0D0D;
+$main-font: 'Raleway', sans-serif;
+
+nav {
+    background-color: $bg-main;
+    .navContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 100px;
+        font-family: $main-font;
+        color: $white;
+        font-weight: 500;
+        margin: 0 15px;
+
+        .btn-menu {
+            display: none;
+        }
+    }
+    
+    .menu {
+        ul {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            z-index: 10;
+
+            li {
+                position: relative;
+
+                &:hover {
+                    color: $secondary-color;
+                }
+
+                .dropdown {
+                    display: none;
+                    position: absolute;
+                    top: calc(100% + 5px);
+                    left: 0;
+                    width: 200px;
+                    background-color: $white;
+                    color: $black;
+                    z-index: 10;
+                    width: 100%;
+                    animation: fadeIn 0.3s ease; /* Animación de entrada del dropdown */
+
+                    li {
+                        padding: 10px;
+                        border-bottom: 1px solid $black;
+                        width: 100%;
+
+                        &:last-child {
+                            border: none;
+                        }
+
+                        &:hover {
+                            color: $secondary-color;
+                        }
+                    }
+                }
+
+                &:hover .dropdown {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0;
+                }
+            }
+        }
+    }
+
+    .login {
+        font-size: 24px;
+        color: $white;
+    }
+
+    .menu-mobile {
+        display: none;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease; /* Transición de entrada y salida del menú móvil */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        position: fixed;
+        z-index: 100;
+        width: 100%;
+        .navContainer {
+            flex-direction: row;
+            height: 50px;
+    
+            .login {
+                display: none;
+            }
+    
+            .btn-menu {
+                display: block;
+            }
+        }
+    
+        .menu {
+            display: none;
+        }
+
+        .btn-menu {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: $white;
+            font-size: 24px;
+        }
+
+        .menu-mobile {
+            &.open {
+                display: block;
+                position: absolute;
+                transform: translateX(0%);
+                color: $black;
+                z-index: 10;
+                background: $white;
+                width: 100%;
+                animation: slideInRight 0.3s ease; /* Animación de entrada lateral del menú */
+
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    padding: 0;
+                    margin: 0;
+
+                    li {
+                        padding: 20px 10px;
+                        border-bottom: 1px solid $bg-main;
+                        width: 100%;
+
+                        &:last-child {
+                            border: none;
+                        }
+
+                        &:hover {
+                            color: $secondary-color;
+                        }
+                    }
+
+                    .dropdown {
+                        position: relative;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        background-color: $white;
+                        color: $black;
+                        z-index: 10;
+                        display: none;
+                        animation: fadeIn 0.3s ease; /* Animación de entrada del dropdown */
+
+                        li {
+                            padding: 10px;
+                            border-bottom: 1px solid $black;
+                            width: 100%;
+
+                            &:last-child {
+                                border: none;
+                            }
+
+                            &:hover {
+                                color: $secondary-color;
+                            }
+                        }
+                    }
+
+                    &:hover .dropdown {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}

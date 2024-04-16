@@ -1,0 +1,200 @@
+@charset "UTF-8";
+/* Project */
+.ProjectSection {
+  margin: 50px auto;
+}
+.ProjectSection .ProjectTitle {
+  font-family: Raleway;
+  font-weight: bold;
+  font-size: 48px;
+  color: #232946;
+  text-align: center;
+}
+.ProjectSection .ProjectContent {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin: 50px 0;
+}
+.ProjectSection .ProjectContent .ProjectSquare {
+  width: 250px;
+  height: 250px;
+  background-color: #cdcdcd;
+  transition: all 0.3s ease-in-out;
+}
+.ProjectSection .ProjectContent .ProjectSquare:hover {
+  background-color: #EEBBC3;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+/* NEWS */
+.NewsSection {
+  background-color: #232946;
+  text-align: center;
+  margin: 50px auto;
+}
+.NewsSection .NewsTitle {
+  font-size: 48px;
+  font-weight: bold;
+  color: #FDFDFD;
+  padding: 25px 0;
+}
+.NewsSection .NewsTitle span {
+  color: #EEBBC3;
+}
+.NewsSection .NewsContent {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(620px, 2fr));
+  gap: 20px; /* Agregamos espacio entre los elementos */
+  justify-items: center; /* Centramos los elementos */
+  padding: 50px 0;
+}
+.NewsSection .NewsContent .NewsComponents {
+  color: #FDFDFD;
+  text-align: left;
+  max-width: 618px;
+  width: 100%;
+  padding: 25px;
+}
+.NewsSection .NewsContent .NewsComponents .NewsTitle {
+  padding: 0;
+  font-size: 24px;
+  font-weight: bold;
+  color: #FDFDFD;
+}
+.NewsSection .NewsContent .NewsComponents .NewsDescription, .NewsSection .NewsContent .NewsComponents .NewsDate {
+  font-size: 16px;
+  font-weight: lighter;
+}
+.NewsSection .NewsContent .NewsComponents .NewsDate {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.NewsSection .NewsContent .NewsComponents .NewsDate .NewsIcon {
+  font-size: 16px;
+  color: #EEBBC3;
+}
+@media screen and (max-width: 768px) {
+  .NewsSection .NewsContent {
+    grid-template-columns: 1fr; /* Cambiamos a una columna cuando el ancho de la pantalla sea menor o igual a 768px */
+  }
+}
+
+/* GALLERY */
+.GallerySection {
+  margin: 50px auto;
+}
+.GallerySection .GalleryTitle {
+  margin-bottom: 50px;
+  text-align: center;
+  font-size: 48px;
+  font-weight: bold;
+  color: #232946;
+}
+
+/* INFO */
+.InfoSection {
+  position: relative;
+  width: 100%;
+  height: 50%;
+  margin: auto;
+}
+.InfoSection .background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../../assets/imgs/Info.png");
+  background-size: cover;
+  background-position: center;
+  filter: brightness(35%);
+  z-index: -1;
+}
+.InfoSection .InfoContainer {
+  position: relative; /* Para que los elementos dentro de .InfoContainer se posicionen relativamente */
+  display: flex; /* Colocar los elementos en dos columnas */
+  align-items: center; /* Centrar verticalmente los elementos */
+  justify-content: center; /* Centrar horizontalmente los elementos */
+  gap: 20px; /* Espacio entre los elementos */
+  z-index: 1; /* Asegura que los elementos estén por encima de la imagen de fondo */
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+}
+.InfoSection .InfoContainer .FAQS {
+  color: #FDFDFD;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 50%;
+  height: 433px;
+  border-right: 3px solid #232946;
+}
+.InfoSection .InfoContainer .FAQSTitlte {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+.InfoSection .InfoContainer .FAQS a:hover {
+  color: #EEBBC3;
+  transition: all 0.3s;
+}
+.InfoSection .InfoContainer .FAQS .icon {
+  color: #EEBBC3;
+  margin-right: 8px;
+  text-align: center;
+}
+.InfoSection .InfoContainer .Contact {
+  margin: 50px auto;
+  color: #FDFDFD;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 50%;
+}
+.InfoSection .InfoContainer .ContactTitle {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+.InfoSection .InfoContainer .Contact form {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 20px;
+}
+.InfoSection .InfoContainer .Contact form button {
+  color: #FDFDFD;
+  background-color: #232946;
+  width: 166px;
+  height: 60px;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+.InfoSection .InfoContainer .Contact form input, .InfoSection .InfoContainer .Contact form textarea {
+  max-width: 610px;
+  width: 100%;
+  background-color: rgba(253, 253, 253, 0.2509803922);
+  border: none;
+  color: #FDFDFD;
+  resize: none;
+}
+.InfoSection .InfoContainer .Contact form input {
+  height: 50px;
+}
+@media screen and (max-width: 768px) {
+  .InfoSection .InfoContainer {
+    flex-direction: column;
+    padding: 50px 0;
+  }
+  .InfoSection .InfoContainer .FAQS {
+    height: auto;
+    border-right: none;
+  }
+}/*# sourceMappingURL=home.css.map */

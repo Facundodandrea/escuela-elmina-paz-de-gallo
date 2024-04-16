@@ -1,0 +1,19 @@
+.article {
+  padding: 50px 0;
+}
+.articleTitle {
+  font-size: 48px;
+  font-weight: bold;
+  color: #232946;
+  margin-bottom: 35px;
+}
+.article .imgPlaceholder {
+  width: 100%;
+  height: 500px;
+  aspect-ratio: 16/9;
+  background-color: gray;
+}
+.articleParagraph {
+  margin: 20px 0;
+  font-size: 24px;
+}/*# sourceMappingURL=article.css.map */
