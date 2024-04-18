@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { IoMenuSharp, IoClose, IoLogInOutline } from "react-icons/io5";
+import Logo from './../../../../../assets/imgs/logo.png'
 import "./header.css";
 
 const Header = () => {
@@ -13,10 +14,12 @@ const Header = () => {
   return (
     <nav>
       <div className="navContainer">
-        <div className="logo"><Link to={'/'}>Logo</Link></div>
+        <div className="logo">
+            <Link to={'/'}><img src={Logo} alt="Logo" /></Link>
+          </div>
         <div className="menu">
           <ul>
-            <li><Link to='/'>Quiénes somos</Link></li>
+            <li><Link to='/faqs'>Quiénes somos</Link></li>
             <li>
               <div>Propuesta educativa</div>
               <ul className="dropdown">
@@ -25,8 +28,8 @@ const Header = () => {
                 <li><Link to='/'>Proyectos</Link></li>
               </ul>
             </li>
-            <li><Link to='/'>Noticias</Link></li>
-            <li><Link to='/'>Galería</Link></li>
+            <li><Link to='/noticias'>Noticias</Link></li>
+            <li><Link to='/galeria'>Galería</Link></li>
             <li><Link to='/'>Documentación</Link></li>
           </ul>
         </div>
@@ -48,8 +51,8 @@ const Header = () => {
               <li><Link to='/'>Proyectos</Link></li>
             </ul>
           </li>
-          <li><Link to='/'>Noticias</Link></li>
-          <li><Link to='/'>Galería</Link></li>
+          <li><Link to='/noticias'>Noticias</Link></li>
+          <li><Link to='/galeria'>Galería</Link></li>
           <li><Link to='/'>Documentación</Link></li>
           <li><Link to='/login'><IoLogInOutline /></Link></li>
         </ul>

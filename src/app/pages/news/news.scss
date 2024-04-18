@@ -1,0 +1,37 @@
+$bg-main: #232946;
+$secondary-color: #EEBBC3;
+$white: #FDFDFD;
+$black: #0D0D0D;
+$main-font: 'Raleway', sans-serif;
+
+.News{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 50px 0;
+
+    &Component{
+        max-width: 580px;
+        width: 100%;
+        margin: 25px 0;
+    }
+
+    &Title{
+        font-size: 24px;
+        font-weight: bold;
+        color: $bg-main;
+        margin-bottom: 20px;
+    }
+
+    &Description{
+        margin-bottom: 20px;
+        font-size: 16px;
+        font-weight: lighter;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+    }
+}

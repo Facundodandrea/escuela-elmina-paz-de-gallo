@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+$bg-white: #FFF;
+$bg-light: #EDF1F5;
+$primary-color: #5279c0;
+$primary-color-hover: rgb(64, 104, 150);
+$font-primary: 'Raleway', sans-serif;
+$Shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
+.navbar-admin {
+    max-height: 65px;
+    height: 100%;
+    width: 100%;
+    background-color: #4f5467;
+    font-family: $font-primary;
+
+    &-content {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        height: 100%;
+        padding: 0 20px;
+    }
+
+    .person {
+        position: relative;
+        cursor: pointer;
+
+        img {
+            width: 40px; 
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        .dropdown {
+            position: absolute;
+            top: calc(100% + 8px);
+            right: 0;
+            background-color: $bg-white;
+            box-shadow: $Shadow;
+            border-radius: 5px;
+            width: 200px;
+            z-index: 1;
+            display: none;
+
+            p {
+                padding: 10px;
+                margin: 0;
+                font-size: 16px;
+                font-weight: bold;
+                color: #333;
+                border-bottom: 1px solid #ddd;
+            }
+
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+
+                li {
+                    padding: 10px;
+                    cursor: pointer;
+                    transition: background-color 0.3s;
+
+                    &:hover {
+                        background-color: #f2f2f2;
+                    }
+                }
+            }
+        }
+
+        &.active .dropdown {
+            display: block;
+        }
+    }
+}

@@ -1,0 +1,12 @@
+@charset "UTF-8";
+.layout-admin {
+  display: flex;
+}
+
+.main-content {
+  flex: 1; /* El contenido principal (menú) se expande para ocupar todo el espacio disponible */
+}
+
+.menu-admin {
+  width: 100%; /* Ocupa todo el ancho disponible */
+}/*# sourceMappingURL=adminLayout.css.map */

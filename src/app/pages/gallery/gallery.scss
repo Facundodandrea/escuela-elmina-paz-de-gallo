@@ -1,0 +1,54 @@
+$bg-main: #232946;
+$secondary-color: #EEBBC3;
+$white: #FDFDFD;
+$black: #0D0D0D;
+$main-font: 'Raleway', sans-serif;
+
+.gallery {
+  max-width: 1200px;
+  width: 100%;
+  margin: 50px auto;
+
+  &Title {
+    font-size: 48px;
+    font-weight: bold;
+    color: $bg-main;
+    margin-bottom: 25px;
+    text-align: center;
+  }
+
+  &Content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+
+    .imgHolder {
+      width: 300px;
+      height: 300px;
+      overflow: hidden;
+      position: relative;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .gallery {
+    width: 300px;
+    margin: auto;
+
+    &Content {
+      .imgHolder {
+        width: 300px;
+      }
+    }
+  }
+}

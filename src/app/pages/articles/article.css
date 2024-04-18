@@ -1,19 +1,23 @@
 .article {
   padding: 50px 0;
 }
-.articleTitle {
+.article h1 {
   font-size: 48px;
   font-weight: bold;
   color: #232946;
   margin-bottom: 35px;
 }
-.article .imgPlaceholder {
+.article img {
   width: 100%;
-  height: 500px;
-  aspect-ratio: 16/9;
-  background-color: gray;
 }
-.articleParagraph {
-  margin: 20px 0;
-  font-size: 24px;
+.article pre {
+  background-color: #f4f4f4;
+  border-radius: 4px;
+  padding: 10px;
+  overflow-x: auto;
+}
+.article blockquote {
+  border-left: 6px solid #ccc;
+  margin: 0;
+  padding: 5px 10px;
 }/*# sourceMappingURL=article.css.map */

@@ -6,22 +6,27 @@ $main-font: Raleway;
 
 .article {
     padding: 50px 0;
-    &Title{
+    h1{
         font-size: 48px;
         font-weight: bold;
         color: $bg-main;
         margin-bottom: 35px;
     }
     
-    .imgPlaceholder{
+    img{
         width: 100%;
-        height: 500px;
-        aspect-ratio: 16/9;
-        background-color: gray;
     }
 
-    &Paragraph{
-        margin: 20px 0;
-        font-size: 24px;
+    pre{
+        background-color: #f4f4f4;
+        border-radius: 4px;
+        padding: 10px;
+        overflow-x: auto;
+    }
+
+    blockquote {
+        border-left: 6px solid #ccc; 
+        margin: 0;
+        padding: 5px 10px;
     }
 }

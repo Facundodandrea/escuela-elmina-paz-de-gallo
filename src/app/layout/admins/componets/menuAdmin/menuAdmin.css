@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+.navbar-admin {
+  max-height: 65px;
+  height: 100%;
+  width: 100%;
+  background-color: #4f5467;
+  font-family: "Raleway", sans-serif;
+}
+.navbar-admin-content {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  padding: 0 20px;
+}
+.navbar-admin .person {
+  position: relative;
+  cursor: pointer;
+}
+.navbar-admin .person img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.navbar-admin .person .dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background-color: #FFF;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  width: 200px;
+  z-index: 1;
+  display: none;
+}
+.navbar-admin .person .dropdown p {
+  padding: 10px;
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  border-bottom: 1px solid #ddd;
+}
+.navbar-admin .person .dropdown ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.navbar-admin .person .dropdown ul li {
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.navbar-admin .person .dropdown ul li:hover {
+  background-color: #f2f2f2;
+}
+.navbar-admin .person.active .dropdown {
+  display: block;
+}/*# sourceMappingURL=menuAdmin.css.map */

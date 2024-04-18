@@ -1,0 +1,23 @@
+.faqs {
+  margin: 50px auto;
+}
+.faqsTitle {
+  font-size: 48px;
+  font-weight: bold;
+  color: #232946;
+}
+.faqsContent {
+  margin: 25px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.faqsContent .questionTitle {
+  font-size: 24px;
+  font-weight: bold;
+}
+.faqsContent .questionReply {
+  font-size: 24px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}/*# sourceMappingURL=faqs.css.map */

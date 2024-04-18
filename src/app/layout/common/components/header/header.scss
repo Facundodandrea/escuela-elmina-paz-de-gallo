@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-
 $bg-main: #232946;
 $secondary-color: #EEBBC3;
 $white: #FDFDFD;
@@ -19,6 +17,13 @@ nav {
         font-weight: 500;
         margin: 0 15px;
 
+        .logo{
+            img{
+                width: 100px;
+                filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+            }
+        }
+
         .btn-menu {
             display: none;
         }
@@ -33,6 +38,7 @@ nav {
 
             li {
                 position: relative;
+                cursor: pointer;
 
                 &:hover {
                     color: $secondary-color;
@@ -48,7 +54,8 @@ nav {
                     color: $black;
                     z-index: 10;
                     width: 100%;
-                    animation: fadeIn 0.3s ease; /* Animación de entrada del dropdown */
+                    animation: fadeIn 0.3s ease;
+                    cursor: pointer;
 
                     li {
                         padding: 10px;
@@ -94,6 +101,12 @@ nav {
         .navContainer {
             flex-direction: row;
             height: 50px;
+
+            .logo{
+                img{
+                    width: 50px;
+                }
+            }
     
             .login {
                 display: none;

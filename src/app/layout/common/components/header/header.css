@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 nav {
   background-color: #232946;
 }
@@ -14,6 +13,10 @@ nav .navContainer {
   font-weight: 500;
   margin: 0 15px;
 }
+nav .navContainer .logo img {
+  width: 100px;
+  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+}
 nav .navContainer .btn-menu {
   display: none;
 }
@@ -25,6 +28,7 @@ nav .menu ul {
 }
 nav .menu ul li {
   position: relative;
+  cursor: pointer;
 }
 nav .menu ul li:hover {
   color: #EEBBC3;
@@ -39,7 +43,8 @@ nav .menu ul li .dropdown {
   color: #0D0D0D;
   z-index: 10;
   width: 100%;
-  animation: fadeIn 0.3s ease; /* Animación de entrada del dropdown */
+  animation: fadeIn 0.3s ease;
+  cursor: pointer;
 }
 nav .menu ul li .dropdown li {
   padding: 10px;
@@ -76,6 +81,9 @@ nav .menu-mobile {
   nav .navContainer {
     flex-direction: row;
     height: 50px;
+  }
+  nav .navContainer .logo img {
+    width: 50px;
   }
   nav .navContainer .login {
     display: none;

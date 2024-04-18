@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+import Logo from './../../../../../assets/imgs/logo.png'
 import { FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 
@@ -11,6 +11,7 @@ const Footer = () => {
       <div className="footerContainer">
         <div className="footerContent">
           <div className="brand">
+            <Link to={'/'}><img src={Logo} alt="Logo" /></Link>
             <h2>
             <Link to={'/'}>Escuela Elmina Paz de Gallo</Link>
             </h2>
@@ -21,8 +22,8 @@ const Footer = () => {
             </h2>
             <ul>
               <li><Link to={'/'}>Inicio</Link></li>
-              <li><Link to={'/'}>Quienes Somos</Link></li>
-              <li><Link to={'/'}>Noticias</Link></li>
+              <li><Link to={'/faqs'}>Quienes Somos</Link></li>
+              <li><Link to={'/noticias'}>Noticias</Link></li>
               <li><Link to={'/'}>Proyectos</Link></li>
               <li><Link to={'/'}>Documentación</Link></li>
             </ul>
@@ -42,8 +43,8 @@ const Footer = () => {
           </h2>
           <ul>
               <li><FaPhoneAlt className="icons"/> 381-4286134</li>
-              <li><FaMapMarkerAlt className="icons"/> escuelaelminapazdegallo@yahoo.com.ar</li>
-              <li><IoIosMail className="icons"/> Alvarez Condarco 50</li>
+              <li><IoIosMail className="icons"/> escuelaelminapazdegallo@yahoo.com.ar</li>
+              <li><FaMapMarkerAlt className="icons"/> Alvarez Condarco 50</li>
             </ul>
           </div>
         </div>

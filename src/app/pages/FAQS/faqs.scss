@@ -1,0 +1,34 @@
+$bg-main: #232946;
+$secondary-color: #EEBBC3;
+$white: #FDFDFD;
+$black: #0D0D0D;
+$main-font: 'Raleway', sans-serif;
+
+.faqs{
+    margin: 50px auto;
+    &Title{
+        font-size: 48px;
+        font-weight: bold;
+        color: $bg-main;
+    }
+
+    &Content{
+        margin: 25px auto;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        .question{
+
+            &Title{
+                font-size: 24px;
+                font-weight: bold;
+            }
+
+            &Reply{
+                font-size: 24px;
+                font-weight: 300;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
