@@ -6,6 +6,7 @@ import './gallery.css';
 
 const Gallery = () => {
   const [images, setImages] = useState([]);
+  const BUCKET_IMAGES = process.env.REACT_APP_BUCKET_IMAGES
   
   const fetchImages = async () => {
     try {
@@ -38,7 +39,7 @@ const Gallery = () => {
         <div className="galleryContent">
           {images.map((image, index) => (
             <div key={index} className="imgHolder">
-              <img src={`https://xkvfxmfhffhwnlaoogvo.supabase.co/storage/v1/object/public/images/${image.name}`} alt={image.name} />
+              <img src={BUCKET_IMAGES + image.name} alt={image.name} />
             </div>
           ))}
         </div>

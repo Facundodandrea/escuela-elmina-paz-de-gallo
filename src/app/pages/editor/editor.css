@@ -50,6 +50,11 @@
   font-family: var(--font-primary);
   overflow-y: auto; /* Agrega una barra de desplazamiento vertical si el contenido es demasiado largo */
 }
+@media (max-width: 768px) {
+  .editor main .editorWrapper .editorContent {
+    margin: 13px 0;
+  }
+}
 .editor main .editorWrapper .editorContent ol,
 .editor main .editorWrapper .editorContent ul {
   margin: 0; /* Eliminar el margen predeterminado */
@@ -68,6 +73,11 @@
 .editor main .editorWrapper .editorContent ul li:before {
   content: "•"; /* Utiliza un círculo como marcador de lista */
   margin-right: 5px; /* Espacio entre el marcador de lista y el texto */
+}
+@media (max-width: 768px) {
+  .editor main .editorWrapper {
+    padding: 90px 0;
+  }
 }
 
 /* Estilo para el select */

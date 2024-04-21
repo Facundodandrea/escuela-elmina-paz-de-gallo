@@ -1,0 +1,44 @@
+.inputImg {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 50px 0 20px 0;
+}
+@media (max-width: 768px) {
+  .inputImg {
+    padding: 90px 0 10px 0;
+  }
+}
+
+.ProjectsSection .ProjectTitle {
+  font-family: Raleway;
+  font-weight: bold;
+  font-size: 48px;
+  color: #232946;
+  text-align: center;
+  margin: 20px 0;
+}
+.ProjectsSection p {
+  font-size: 24px;
+  margin: 0 5px;
+}
+.ProjectsSection .ProjectContent {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin: 50px 0;
+  min-height: 369px;
+}
+.ProjectsSection .ProjectSquare {
+  width: 250px;
+  height: 250px;
+  background-color: #cdcdcd;
+  transition: all 0.3s ease-in-out;
+}
+@media (max-width: 768px) {
+  .ProjectsSection {
+    padding: 90px 0 10px 0;
+  }
+}/*# sourceMappingURL=projects.css.map */

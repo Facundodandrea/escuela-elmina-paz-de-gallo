@@ -8,6 +8,13 @@ import News from './app/pages/news/News';
 import Dashboard from './app/pages/dashboard/Dashboard';
 import Editor from './app/pages/editor/Editor';
 import GalleryEditor from './app/pages/gallery-editor/GalleryEditor';
+import Admins from './app/pages/admins/Admins';
+import SignUp from './app/pages/signup/SignUp';
+import Projects from './app/pages/projects/Projects';
+import ProjectsEditor from './app/pages/projects/ProjectsEditor';
+import CarouselEditor from './app/pages/carousel/CarouselEditor';
+import Proyecto from './app/pages/projects/Proyecto';
+import Proyectos from './app/pages/projects/Proyectos';
 
 const App = () => {  
   return (
@@ -25,9 +32,14 @@ const App = () => {
         <Route path="/editor" element={<Editor />} />
         <Route path="/editor/:id" element={<Editor />} />
         <Route path="/gallery-editor" element={<GalleryEditor />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/admins" element={<Admins />} />
+        <Route path="/sign-up" element={<SignUp />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/projects-editor" element={<ProjectsEditor />} />
+        <Route path="/projects-editor/:id" element={<ProjectsEditor />} />
+        <Route path="/proyectos" element={<Proyectos />} />
+        <Route path="/proyecto/:id" element={<Proyecto />} />
+        <Route path="/carrousel-editor" element={<CarouselEditor />} />
       </Routes>
     </Router>
     </>

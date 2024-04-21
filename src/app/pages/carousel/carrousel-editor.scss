@@ -1,0 +1,47 @@
+.carrousel-editor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 25px 0;
+
+    .controls {
+        display: flex;
+        flex-direction: column;
+        max-width: 700px;
+        width: 100%;
+        margin: 25px 0;
+        gap: 20px;
+    }
+
+    .carrouselContent {
+        width: 100%; /* Utiliza el ancho máximo disponible */
+        max-width: 700px; /* Establece el tamaño máximo */
+        overflow-x: auto; /* Agrega desplazamiento horizontal si el contenido es más ancho que el contenedor */
+
+        table {
+            width: 100%; /* Ocupa todo el ancho disponible */
+        }
+
+        thead {
+            background-color: #EDF1F5;
+        }
+
+        .btns{
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            justify-content: center;
+
+        }
+    }
+    button{
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+    }
+
+
+    @media (max-width: 768px) {
+        padding: 90px 0;
+    }
+}

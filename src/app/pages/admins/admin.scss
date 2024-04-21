@@ -1,0 +1,31 @@
+.activityTable{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 25px 0;
+
+    table {
+        width: 100%; /* Ocupa todo el ancho disponible */
+    }
+
+    thead {
+        background-color: #EDF1F5;
+    }
+
+    .btns{
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        justify-content: center;
+
+    }
+    @media (max-width: 768px) {
+        padding: 90px 0;
+    }
+}
+button{
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+

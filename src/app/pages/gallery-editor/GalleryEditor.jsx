@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import Layout from '../../layout/admins/AdminLayout';
 import supabase from '../../../supabase/Client';
+import './gallery-editor.css'
 
 const GalleryEditor = () => {
   const [images, setImages] = useState([]);
   const [uploading, setUploading] = useState(false);
+
+  const BUCKET_IMAGES = process.env.REACT_APP_BUCKET_IMAGES
   
   const getImages = async () => {
     try {
@@ -85,7 +88,7 @@ const GalleryEditor = () => {
         <div className="galleryContent">
           {images.map((image, index) => (
             <div key={index} className="imageContainer">
-              <img className="imgHolder" src={`https://xkvfxmfhffhwnlaoogvo.supabase.co/storage/v1/object/public/images/${image.name}`} alt={image.name} />
+              <img className="imgHolder" src={BUCKET_IMAGES + image.name} alt={image.name} />
               <button onClick={() => deleteImage(image)}>Eliminar</button>
             </div>
           ))}

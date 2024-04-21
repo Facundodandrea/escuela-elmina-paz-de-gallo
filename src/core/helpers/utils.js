@@ -12,4 +12,20 @@ const stripHtmlTags = (html) => {
   return withoutHtmlTags;
 };
 
-export { stripHtmlTags };
+const searchImage = (json) => {
+  // Si el JSON está vacío, devuelve una cadena vacía
+  if (!json) {
+    return '';
+  }
+  
+  // Expresión regular para buscar la primera etiqueta <img> y su contenido
+  const imgRegex = /<img[^>]+>/;
+
+  // Busca la primera coincidencia de la etiqueta <img> en el JSON
+  const match = json.match(imgRegex);
+
+  // Si se encuentra una coincidencia, devuelve la etiqueta <img> y su contenido, de lo contrario, devuelve una cadena vacía
+  return match ? match[0] : '';
+};
+
+export { stripHtmlTags, searchImage };

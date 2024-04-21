@@ -47,6 +47,11 @@
                 transform: translate(-1%, 0);
                 font-family: var(--font-primary);
                 overflow-y: auto; /* Agrega una barra de desplazamiento vertical si el contenido es demasiado largo */
+
+                @media (max-width: 768px) {
+                    margin: 13px 0;
+                }
+
             }
             
             /* Estilos para las listas */
@@ -75,6 +80,10 @@
             .editorContent ul li:before {
                 content: "\2022"; /* Utiliza un círculo como marcador de lista */
                 margin-right: 5px; /* Espacio entre el marcador de lista y el texto */
+            }
+
+            @media (max-width: 768px) {
+                padding: 90px 0;
             }
         }
     }

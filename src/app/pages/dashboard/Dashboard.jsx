@@ -2,8 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import useAuthRedirect from '../../../core/middleware/authService'
 import supabase from '../../../supabase/Client'
-import { SidebarAdmin } from "../../layout/admins/componets/sidebarAdmin/SidebarAdmin";
-import { MenuAdmin } from '../../layout/admins/componets/menuAdmin/MenuAdmin';
+import Layout from '../../../app/layout/admins/AdminLayout'
 import { FiEdit, FiImage, FiUsers, FiUserPlus, FiEdit2, FiTrash } from 'react-icons/fi';
 import './dashboard.css';
 
@@ -45,10 +44,9 @@ const Dashboard = () => {
     };
 
     return (
+        <Layout>
         <div className='dashboard'>
-            <SidebarAdmin />
-            <main>
-                <MenuAdmin />
+            <div className="main">
                 <div className="container">
                     <div className="quickAccess">
                         <div className="access">
@@ -78,8 +76,10 @@ const Dashboard = () => {
                                     <tr key={article.id}>
                                         <td>{article.title}</td>
                                         <td>
-                                            <Link to={`/editor/${article.id}`} onClick={() => console.log('ID del artículo a editar:', article.id)}><FiEdit2 title="Modificar" /></Link>
+                                            <div className="actions">
+                                            <Link to={`/editor/${article.id}`}><FiEdit2 title="Modificar" /></Link>
                                             <button onClick={() => handleDeleteArticle(article.id)}><FiTrash title="Eliminar" /></button>
+                                            </div>
                                         </td>
                                     </tr>
                                 ))}
@@ -87,8 +87,9 @@ const Dashboard = () => {
                         </table>
                     </div>
                 </div>
-            </main>
-        </div>
+                </div>
+            </div>
+        </Layout>
     )
 }
 

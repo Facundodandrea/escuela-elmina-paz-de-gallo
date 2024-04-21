@@ -1,5 +1,3 @@
-// db.js
-
 import supabase from "../../supabase/Client";
 
 // Función para obtener todos los artículos

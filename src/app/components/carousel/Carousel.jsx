@@ -2,9 +2,28 @@
 import React, { useState, useEffect } from "react";
 import "./carousel.css";
 import { Link } from "react-router-dom";
+import supabase from '../../../supabase/Client';
 
-const Carousel = ({ slides }) => {
+const Carousel = () => {
+  const [slides, setSlides] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const fetchSlides = async () => {
+      try {
+        const { data, error } = await supabase.from('carrousel').select('*');
+        if (error) {
+          throw error;
+        }
+        console.log("Slides obtenidos:", data);
+        setSlides(data);
+      } catch (error) {
+        console.error('Error fetching slides:', error.message);
+      }
+    };
+
+    fetchSlides();
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -28,6 +47,15 @@ const Carousel = ({ slides }) => {
     );
   };
 
+  const decodeBase64Image = (base64String) => {
+    const binaryString = atob(base64String);
+    const byteArray = new Uint8Array(binaryString.length);
+    for (let i = 0; i < binaryString.length; i++) {
+      byteArray[i] = binaryString.charCodeAt(i);
+    }
+    return new Blob([byteArray], { type: 'image/png' });
+  };
+
   if (!slides || slides.length === 0) {
     return null;
   }
@@ -37,7 +65,7 @@ const Carousel = ({ slides }) => {
       <div className="slide-container" style={{ width: `${slides.length * 100}%`, transform: `translateX(-${currentIndex * (100 / slides.length)}%)` }}>
         {slides.map((slide, index) => (
           <Link key={index} to={slide.link} className={`slide ${index === currentIndex ? 'active' : ''}`}>
-            <img src={slide.image} alt={`Slide ${index + 1}`} />
+            {slide.img_URL && <img src={URL.createObjectURL(decodeBase64Image(slide.img_URL))} alt={`Slide ${index + 1}`} />}
           </Link>
         ))}
       </div>

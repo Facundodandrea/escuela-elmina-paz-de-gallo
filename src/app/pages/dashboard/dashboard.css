@@ -11,47 +11,72 @@
   display: flex;
   background-color: #EDF1F5;
 }
-.dashboard main {
+.dashboard .main {
   display: flex;
   flex-direction: column;
   width: 100%;
   height: 100vh;
   font-family: var(--font-primary);
 }
-.dashboard main .quickAccess {
+.dashboard .main .quickAccess {
   display: flex;
   flex-direction: row;
   background-color: white;
 }
-.dashboard main .quickAccess .access {
+.dashboard .main .quickAccess .access {
   max-width: 500px;
-  width: 100%;
+}
+.dashboard .main .quickAccess .access a {
+  display: flex;
+  width: 300px;
   text-align: center;
-  padding: 50px;
+  height: 100px;
   border-right: 1px solid #ccc;
   font-family: var(--font-primary);
+  align-items: center;
+  justify-content: center;
 }
-.dashboard main .quickAccess .access:last-child {
+.dashboard .main .quickAccess .access:last-child {
   border: none;
 }
-.dashboard main .activityTable {
+@media screen and (max-width: 768px) {
+  .dashboard .main .quickAccess {
+    flex-wrap: wrap;
+    margin-top: 90px;
+  }
+  .dashboard .main .quickAccess .access a {
+    width: 440px;
+    border-right: none;
+    border-bottom: 1px solid #ccc;
+  }
+}
+.dashboard .main .activityTable {
   margin-top: 20px;
   background-color: white;
   overflow-x: auto;
 }
-.dashboard main .activityTable table {
+.dashboard .main .activityTable table {
   width: 100%;
   border-collapse: collapse;
 }
-.dashboard main .activityTable table th, .dashboard main .activityTable table td {
+.dashboard .main .activityTable table th, .dashboard .main .activityTable table td {
   padding: 15px;
   text-align: left;
   border-bottom: 1px solid #ccc;
 }
-.dashboard main .activityTable table th {
+.dashboard .main .activityTable table th .actions, .dashboard .main .activityTable table td .actions {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.dashboard .main .activityTable table th .actions button, .dashboard .main .activityTable table td .actions button {
+  background-color: transparent;
+  border: none;
+}
+.dashboard .main .activityTable table th {
   font-weight: bold;
 }
-.dashboard main .activityTable table img {
+.dashboard .main .activityTable table img {
   max-width: 100px;
   height: auto;
 }/*# sourceMappingURL=dashboard.css.map */

@@ -15,19 +15,21 @@ const Faqs = () => {
                         <h3 className="questionTitle">
                         ¿Dónde está ubicada la escuela?
                         </h3>
-                            <p className="questionReply">Nuestra institución está ubicada en Alvarez Condarco 50, en la ciudad de San Miguel de Tucumán, Tucumán</p>
+                            <p className="questionReply">Nuestra institución está ubicada en Alvarez Condarco 50, en la ciudad de San Miguel de Tucumán, Tucumán.</p>
                     </div>
                     <div className="question">
                         <h3 className="questionTitle">
                         ¿Cuál es el  horario de atención?
                         </h3>
-                            <p className="questionReply">El horario de atención al público en general es lunes, miercoles y viernes de 8:00 a 10:00 am y de 14:30 a 16:00 horas</p>
+                            <p className="questionReply">El horario de atención al público en general es lunes, miercoles y viernes de 8:00 a 10:00 am y de 14:30 a 16:00 horas.</p>
                     </div>
                     <div className="question">
                         <h3 className="questionTitle">
                         ¿Por qué eligirnos?
                         </h3>
-                            <p className="questionReply"></p>
+                            <p className="questionReply">
+                            Somos una institución con una amplia trayectoria, siempre a la vanguardia del conocimiento, brindando apoyo integral a los niños para su desarrollo.
+                            </p>
                     </div>
                     <div className="question">
                         <h3 className="questionTitle">

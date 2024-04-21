@@ -36,13 +36,10 @@ aside .asideContainer .person {
 aside .asideContainer .person img {
   width: 80px;
   height: 80px;
-  border-radius: 50%;
-  margin-right: 10px;
-  border: 1px solid;
 }
 aside .asideContainer .person p {
   font-size: 16px;
-  font-weight: 400;
+  font-weight: bold;
 }
 aside .asideContainer .person .dropdown {
   position: relative;
@@ -94,4 +91,47 @@ aside .asideContainer .menu ul li a:hover {
 }
 aside .asideContainer .menu ul li a svg {
   margin-right: 10px;
+}
+aside .asideContainer .menu .projects-dropdown {
+  position: relative;
+}
+aside .asideContainer .menu .projects-dropdown .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 100px;
+  background-color: var(--bg-white);
+  box-shadow: var(--Shadow);
+  z-index: 1;
+  border-radius: 5px;
+  padding: 10px 0;
+  width: 200px;
+  transform: translateX(-50%);
+}
+aside .asideContainer .menu .projects-dropdown .dropdown-menu ul {
+  padding: 0;
+}
+aside .asideContainer .menu .projects-dropdown .dropdown-menu ul li {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+aside .asideContainer .menu .projects-dropdown .dropdown-menu ul li:hover {
+  background-color: #f2f2f2;
+}
+aside .asideContainer .menu .projects-dropdown .dropdown-menu ul li a {
+  color: #333;
+  text-decoration: none;
+  display: block;
+}
+aside .asideContainer .menu .projects-dropdown .dropdown-menu ul li a:hover {
+  color: #000;
+}
+aside .asideContainer .menu .projects-dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  aside {
+    display: none;
+  }
 }/*# sourceMappingURL=sidebarAdmin.css.map */

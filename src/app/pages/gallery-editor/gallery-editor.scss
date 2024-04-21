@@ -1,0 +1,28 @@
+.gallery-editor{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px 0;
+
+    input{
+        margin-bottom: 20px;
+    }
+
+    .imageContainer{
+        display: flex;
+        flex-direction: column;
+
+        button {
+            border: none;
+            padding: 30px;
+            cursor: pointer;
+            font-size: 24px;
+            font-weight: 600;
+        }
+    }
+
+    @media (max-width: 768px) {
+        padding: 90px 0;
+    }
+}
