@@ -12,7 +12,7 @@ import { FaCalendarAlt, FaCheck } from 'react-icons/fa';
 import './home.css';
 
 const Home = () => {
-  const email = 'https://formsubmit.co/facundodandrea01@gmail.com';
+  const email = 'https://formsubmit.co/escuelaelminapazdegallo@yahoo.com.ar';
   const [latestArticles, setLatestArticles] = useState([]);
   const [projects, setProjects] = useState([]);
 
