@@ -78,7 +78,7 @@ const GalleryCarousel = () => {
       >
           {images.map((image, index) => (
             <div key={index} className="imgHolder">
-              <img src={`https://xkvfxmfhffhwnlaoogvo.supabase.co/storage/v1/object/public/images/${image.name}`} alt={image.name} />
+              <img src={`https://wewvpopszsmbzoagrmyu.supabase.co/storage/v1/object/public/images/${image.name}`} alt={image.name} />
             </div>
           ))}
       </div>
