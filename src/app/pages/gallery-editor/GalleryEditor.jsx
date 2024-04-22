@@ -87,7 +87,7 @@ const GalleryEditor = () => {
         <div className="galleryContent">
           {images.map((image, index) => (
             <div key={index} className="imageContainer">
-              <img className="imgHolder" src={`https://wewvpopszsmbzoagrmyu.supabase.co/storage/v1/object/public/images/${image.name}`} alt={image.name} />
+              <img className="imgHolder" src={`https://mmtixvyvrhofccnmfjfw.supabase.co/storage/v1/object/public/images/${image.name}`} alt={image.name} />
               <button onClick={() => deleteImage(image)}>Eliminar</button>
             </div>
           ))}

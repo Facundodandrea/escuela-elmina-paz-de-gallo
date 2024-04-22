@@ -38,7 +38,7 @@ const Gallery = () => {
         <div className="galleryContent">
           {images.map((image, index) => (
             <div key={index} className="imgHolder">
-              <img src={`https://wewvpopszsmbzoagrmyu.supabase.co/storage/v1/object/public/images/${image.name}`} alt={image.name} />
+              <img src={`https://mmtixvyvrhofccnmfjfw.supabase.co/storage/v1/object/public/images/${image.name}`} alt={image.name} />
             </div>
           ))}
         </div>
