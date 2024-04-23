@@ -1,0 +1,23 @@
+.proposed{
+    padding: 50px 0;
+
+    &Title{
+        font-size: 48px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    &SubTitle{
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    p{
+        margin-bottom: 15px;
+    }
+
+    @media (max-width: 768px) {
+        padding: 50px 10px;
+    }
+}

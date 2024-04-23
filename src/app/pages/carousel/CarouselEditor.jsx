@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Layout from '../../layout/admins/AdminLayout';
 import supabase from '../../../supabase/Client';
 import useAuthRedirect from '../../../core/middleware/authService';
-import './carrousel-editor.css'
+import './carrousel-editor.css';
 
 const CarrouselEditor = () => {
     useAuthRedirect('/carrousel-editor');
@@ -38,10 +38,6 @@ const CarrouselEditor = () => {
         }
         return new Blob([byteArray], { type: 'image/png' });
     };
-
-    if (!slides || slides.length === 0) {
-        return null;
-    }
 
     const encodeImageToBase64 = (file) => {
         return new Promise((resolve, reject) => {
@@ -134,15 +130,15 @@ const CarrouselEditor = () => {
         <Layout>
             <div className="carrousel-editor">
                 <div className="controls">
-                <input type="file" accept=".jpg,.jpeg,.png" onChange={handleImageChange} disabled={uploading} />
-                <input type="text" value={link} onChange={(e) => setLink(e.target.value)} placeholder="Enlace" disabled={editingLinkId !== null} />
-                {editingLinkId !== null ? (
-                    <button onClick={saveLink}>Guardar Enlace</button>
-                ) : (
-                    <button onClick={uploadImage} disabled={uploading}>Guardar</button>
-                )}
-                <button onClick={handleCancel}>Cancelar</button>
-                {uploading && <p>Subiendo imagen...</p>}
+                    <input type="file" accept=".jpg,.jpeg,.png" onChange={handleImageChange} disabled={uploading} />
+                    <input type="text" value={link} onChange={(e) => setLink(e.target.value)} placeholder="Enlace" disabled={editingLinkId !== null} />
+                    {editingLinkId !== null ? (
+                        <button onClick={saveLink}>Guardar Enlace</button>
+                    ) : (
+                        <button onClick={uploadImage} disabled={uploading}>Guardar</button>
+                    )}
+                    <button onClick={handleCancel}>Cancelar</button>
+                    {uploading && <p>Subiendo imagen...</p>}
                 </div>
                 <div className="carrouselContent">
                     <table>

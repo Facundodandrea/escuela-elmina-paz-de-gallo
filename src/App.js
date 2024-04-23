@@ -15,6 +15,10 @@ import ProjectsEditor from './app/pages/projects/ProjectsEditor';
 import CarouselEditor from './app/pages/carousel/CarouselEditor';
 import Proyecto from './app/pages/projects/Proyecto';
 import Proyectos from './app/pages/projects/Proyectos';
+import Reseña from './app/pages/FAQS/Reseña';
+import Documentation from './app/pages/documentation/Documentation';
+import PropuestaInicial from './app/pages/propuestas/propuesta-inicial/PropuestaInicial';
+import PropuestaPrimaria from './app/pages/propuestas/propuesta-primaria/PropuestaPrimaria';
 
 const App = () => {  
   return (
@@ -40,6 +44,10 @@ const App = () => {
         <Route path="/proyectos" element={<Proyectos />} />
         <Route path="/proyecto/:id" element={<Proyecto />} />
         <Route path="/carrousel-editor" element={<CarouselEditor />} />
+        <Route path="/reseña" element={<Reseña />} />
+        <Route path="/documentacion" element={<Documentation />} />
+        <Route path="/propuesta/inicial" element={<PropuestaInicial />} />
+        <Route path="/propuesta/primaria" element={<PropuestaPrimaria />} />
       </Routes>
     </Router>
     </>

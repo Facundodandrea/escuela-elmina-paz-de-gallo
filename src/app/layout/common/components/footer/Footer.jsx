@@ -22,10 +22,11 @@ const Footer = () => {
             </h2>
             <ul>
               <li><Link to={'/'}>Inicio</Link></li>
-              <li><Link to={'/faqs'}>Quienes Somos</Link></li>
+              <li><Link to={'/faqs'}>Preguntas</Link></li>
+              <li><Link to={'/reseña'}>Reseña</Link></li>
               <li><Link to={'/noticias'}>Noticias</Link></li>
               <li><Link to={'/proyectos'}>Proyectos</Link></li>
-              <li><Link to={'/'}>Documentación</Link></li>
+              <li><Link to={'/documentacion'}>Documentación</Link></li>
             </ul>
           </div>
           <div className="propuestas">
@@ -33,8 +34,8 @@ const Footer = () => {
             Propuesta Educativa
           </h2>
           <ul>
-              <li><Link to={'/'}>Nivel Inicial</Link></li>
-              <li><Link to={'/'}>Nivel Primario</Link></li>
+              <li><Link to={'/propuesta/inicial'}>Nivel Inicial</Link></li>
+              <li><Link to={'/propuesta/primaria'}>Nivel Primario</Link></li>
             </ul>
           </div>
           <div className="contacto">

@@ -1,0 +1,21 @@
+.proposed {
+  padding: 50px 0;
+}
+.proposedTitle {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.proposedSubTitle {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.proposed p {
+  margin-bottom: 15px;
+}
+@media (max-width: 768px) {
+  .proposed {
+    padding: 50px 10px;
+  }
+}/*# sourceMappingURL=propuesta.css.map */

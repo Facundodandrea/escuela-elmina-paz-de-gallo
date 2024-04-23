@@ -1,0 +1,41 @@
+.review .titleReview {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 20px auto;
+}
+.review .paragraphReview {
+  font-size: 18px;
+  margin: 5px 0;
+}
+.review .spanReview {
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+.review .spanReview p {
+  font-weight: 400;
+}
+.review table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 30px 0;
+}
+.review .tableHead {
+  text-align: center;
+}
+.review th, .review td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+}
+.review th {
+  background-color: #f2f2f2;
+}
+@media (max-width: 768px) {
+  .review {
+    padding: 50px 10px;
+  }
+}/*# sourceMappingURL=reseña.css.map */
